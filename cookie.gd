@@ -1,4 +1,4 @@
-extends StaticBody2D
+extends Area2D
 
 signal okenko
 
@@ -23,15 +23,23 @@ func pohyb(delta):
 	else:
 		position.x+=rychlost*delta
 
-func prodejSe():
+func prodej_se():
 	#přičti penize
-	
+	get_parent().penize += cena
+	#odstraní se
 	queue_free()
 
 func nastav_cenu(novaCena):
 	cena = novaCena
+	
+func nastav_smer(novySmer):
+	smer = novySmer
 
 func _on_body_entered(body):
 	#jestli pás, vem směr a rychlost
+	if(body.has_method("ziskej_smer")):
+		smer = body.ziskej_smer()
 	#jestli okenko, prodej se
-	pass # Replace with function body.
+	if(body.name == "okenko"):
+		prodej_se()
+	

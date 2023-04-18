@@ -6,3 +6,9 @@
 [node name="pec" type="Sprite2D"]
 texture = ExtResource("1_iatx5")
 script = ExtResource("2_xk55r")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -15,8 +15,5 @@ func ziskej_smer():
 	return smer
 
 func nastav_smer():
-	if(position.y<get_viewport_rect().size.y/2):
-		smer = 'dolů'
-	else:
-		smer = 'nahoru'
-		$oDolu.rotate(PI)
+	smer = 'doprava'
+

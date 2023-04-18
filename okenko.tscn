@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bonaym4klk588" path="res://icon.svg" id="1_s53ck"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wo4fn"]
+size = Vector2(29, 120)
 
 [node name="okenko" type="StaticBody2D"]
 
@@ -11,4 +12,5 @@ scale = Vector2(0.25, 1)
 texture = ExtResource("1_s53ck")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0)
 shape = SubResource("RectangleShape2D_wo4fn")
