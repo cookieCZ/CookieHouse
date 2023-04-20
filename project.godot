@@ -15,6 +15,13 @@ run/main_scene="res://svet.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=2340
+window/handheld/orientation=1
+window/stretch/mode="viewport"
+
 [rendering]
 
 renderer/rendering_method="mobile"

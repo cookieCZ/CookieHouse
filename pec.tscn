@@ -1,14 +1,65 @@
-[gd_scene load_steps=3 format=3 uid="uid://g8ljy1knnof7"]
+[gd_scene load_steps=4 format=3 uid="uid://g8ljy1knnof7"]
 
-[ext_resource type="Texture2D" uid="uid://bonaym4klk588" path="res://icon.svg" id="1_iatx5"]
+[ext_resource type="Texture2D" uid="uid://xvjsj61vbe3j" path="res://Pec.png" id="1_dredl"]
 [ext_resource type="Script" path="res://pec.gd" id="2_xk55r"]
 
-[node name="pec" type="Sprite2D"]
-texture = ExtResource("1_iatx5")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjrnn"]
+size = Vector2(1021.03, 1317.12)
+
+[node name="pec" type="Area2D"]
+position = Vector2(46.5, -51.0543)
+scale = Vector2(0.3, 0.3)
 script = ExtResource("2_xk55r")
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_dredl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-5.10507, 311.968)
+shape = SubResource("RectangleShape2D_xjrnn")
+
+[node name="Button" type="Button" parent="."]
+modulate = Color(0, 0, 0, 0)
+offset_left = -485.0
+offset_top = -336.0
+offset_right = 505.0
+offset_bottom = 950.0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+visible = false
+offset_left = -648.0
+offset_top = -714.0
+offset_right = 628.0
+offset_bottom = 1293.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="CenaLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = "111/ks"
+
+[node name="CenaButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = "1 000"
+
+[node name="RychlostLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = "22/min"
+
+[node name="RychlostButton" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 300
+text = "2 000"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/CenaButton" to="." method="_on_cena_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/RychlostButton" to="." method="_on_rychlost_button_pressed"]

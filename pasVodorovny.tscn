@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bonaym4klk588" path="res://icon.svg" id="2_8bi2h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj147"]
-size = Vector2(353, 53)
+size = Vector2(376.333, 18)
 
 [node name="pasSvisly" type="StaticBody2D"]
+scale = Vector2(3, 3)
 script = ExtResource("1_6rc7o")
 
 [node name="oDoprava" type="Sprite2D" parent="."]
@@ -15,5 +16,5 @@ scale = Vector2(2.96094, 0.523437)
 texture = ExtResource("2_8bi2h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(162.5, -1.5)
+position = Vector2(162.5, 1.58946e-07)
 shape = SubResource("RectangleShape2D_oj147")

@@ -1,12 +1,7 @@
 res://pec.tscn
 res://pec.gd
 res://cookie.tscn
-res://cookie.gd
-res://svet.tscn
-res://pas.tscn
-res://okenko.tscn
-res://pas.gd
-res://svet.gd
 res://pasSvisly.tscn
 res://pasVodorovny.tscn
-res://pasVodorovny.gd
+res://svet.tscn
+res://okenko.tscn

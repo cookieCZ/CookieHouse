@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bq6ptbte7kpcp"]
+[gd_scene load_steps=6 format=3 uid="uid://bq6ptbte7kpcp"]
 
 [ext_resource type="Script" path="res://svet.gd" id="1_h4hr8"]
 [ext_resource type="PackedScene" uid="uid://n3vlutfm4s1f" path="res://okenko.tscn" id="1_lhcts"]
 [ext_resource type="PackedScene" uid="uid://g8ljy1knnof7" path="res://pec.tscn" id="2_m366r"]
 [ext_resource type="PackedScene" uid="uid://c86cvih5rm5og" path="res://pasSvisly.tscn" id="3_r4kxe"]
-[ext_resource type="PackedScene" uid="uid://6vi7dl3ekv6e" path="res://cookie.tscn" id="4_veaph"]
 [ext_resource type="PackedScene" uid="uid://b5dqvha6hp0hi" path="res://pasVodorovny.tscn" id="6_yka7q"]
 
 [node name="svet" type="Node2D"]
@@ -12,30 +11,28 @@ script = ExtResource("1_h4hr8")
 
 [node name="okenko" parent="." instance=ExtResource("1_lhcts")]
 z_index = 5
-position = Vector2(400, 324)
+position = Vector2(1087, 1176)
 
 [node name="pec" parent="." instance=ExtResource("2_m366r")]
-z_index = 3
-position = Vector2(337, -17)
-
-[node name="cookie" parent="." instance=ExtResource("4_veaph")]
-position = Vector2(142, 153)
+z_index = 11
+position = Vector2(757, 203)
 
 [node name="Label" type="Label" parent="."]
-offset_right = 132.0
-offset_bottom = 74.0
+offset_right = 552.0
+offset_bottom = 587.0
+theme_override_font_sizes/font_size = 300
 
 [node name="pasSvisly" parent="." instance=ExtResource("3_r4kxe")]
 z_index = 1
-position = Vector2(334, 207)
+position = Vector2(746, 593)
 
 [node name="pasSvisly2" parent="." instance=ExtResource("6_yka7q")]
-position = Vector2(28, 345)
+position = Vector2(50, 1170)
 
 [node name="pec2" parent="." instance=ExtResource("2_m366r")]
-z_index = 3
-position = Vector2(325, 627)
+z_index = 11
+position = Vector2(728, 2004)
 
 [node name="pasSvisly3" parent="." instance=ExtResource("3_r4kxe")]
 z_index = 1
-position = Vector2(333, 496)
+position = Vector2(719, 1687)
