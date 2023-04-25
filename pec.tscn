@@ -16,6 +16,7 @@ wait_time = 5.0
 autostart = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("1_dredl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -28,6 +29,7 @@ offset_left = -485.0
 offset_top = -336.0
 offset_right = 505.0
 offset_bottom = 950.0
+theme_override_font_sizes/font_size = 200
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 visible = false

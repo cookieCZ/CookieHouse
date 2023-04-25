@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bq6ptbte7kpcp"]
+[gd_scene load_steps=5 format=3 uid="uid://bq6ptbte7kpcp"]
 
 [ext_resource type="Script" path="res://svet.gd" id="1_h4hr8"]
 [ext_resource type="PackedScene" uid="uid://n3vlutfm4s1f" path="res://okenko.tscn" id="1_lhcts"]
 [ext_resource type="PackedScene" uid="uid://g8ljy1knnof7" path="res://pec.tscn" id="2_m366r"]
-[ext_resource type="PackedScene" uid="uid://c86cvih5rm5og" path="res://pasSvisly.tscn" id="3_r4kxe"]
 [ext_resource type="PackedScene" uid="uid://b5dqvha6hp0hi" path="res://pasVodorovny.tscn" id="6_yka7q"]
 
 [node name="svet" type="Node2D"]
@@ -22,17 +21,5 @@ offset_right = 552.0
 offset_bottom = 587.0
 theme_override_font_sizes/font_size = 300
 
-[node name="pasSvisly" parent="." instance=ExtResource("3_r4kxe")]
-z_index = 1
-position = Vector2(746, 593)
-
-[node name="pasSvisly2" parent="." instance=ExtResource("6_yka7q")]
+[node name="pasHlavni" parent="." instance=ExtResource("6_yka7q")]
 position = Vector2(50, 1170)
-
-[node name="pec2" parent="." instance=ExtResource("2_m366r")]
-z_index = 11
-position = Vector2(728, 2004)
-
-[node name="pasSvisly3" parent="." instance=ExtResource("3_r4kxe")]
-z_index = 1
-position = Vector2(719, 1687)
