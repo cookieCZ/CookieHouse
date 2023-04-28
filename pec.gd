@@ -4,19 +4,24 @@ var cookie = preload("res://cookie.tscn")
 var pasSvisly = preload("res://pasSvisly.tscn")
 
 var spawnZaMinutu = 12
-var cenaSusenky = 5
-var upgradeRychlosti = 20
-var upgradeCeny = 20
+var cenaSusenky
+var upgradeRychlosti
+var upgradeCeny
 var smerSusenky
 var koupena = false
-var cenaPece = 5
+var cenaPece
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	nastav_smer_spawnu()
 	$Button.modulate = Color("#FFFFFFFF")
-	$Button.text = "+ " + str(cenaPece)
-	
+	$Button.text = "+: " + str(cenaPece)
+
+func muj_init(cisloPece):
+	cenaPece = pow(1000, cisloPece)
+	cenaSusenky = pow(100, cisloPece) * 5
+	upgradeRychlosti = pow(100, cisloPece) * 20
+	upgradeCeny = pow(100, cisloPece) * 20
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
