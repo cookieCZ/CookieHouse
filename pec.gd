@@ -15,7 +15,7 @@ var cenaPece
 func _ready():
 	nastav_smer_spawnu()
 	$Button.modulate = Color("#FFFFFFFF")
-	$Button.text = "+: " + str(cenaPece)
+	$Button.text = "+: " + Cisla.zobraz(cenaPece)
 
 func muj_init(cisloPece):
 	cenaPece = pow(1000, cisloPece)
@@ -59,10 +59,10 @@ func nastav_smer_spawnu():
 
 func _on_button_pressed():
 	if(koupena):
-		$MarginContainer/VBoxContainer/CenaLabel.text = str(cenaSusenky) + "/ks"
-		$MarginContainer/VBoxContainer/RychlostLabel.text = str(spawnZaMinutu) + "/min"
-		$MarginContainer/VBoxContainer/CenaButton.text = str(upgradeCeny)
-		$MarginContainer/VBoxContainer/RychlostButton.text = str(upgradeRychlosti)
+		$MarginContainer/VBoxContainer/CenaLabel.text = Cisla.zobraz(cenaSusenky) + "/ks"
+		$MarginContainer/VBoxContainer/RychlostLabel.text = Cisla.zobraz(spawnZaMinutu) + "/min"
+		$MarginContainer/VBoxContainer/CenaButton.text = Cisla.zobraz(upgradeCeny)
+		$MarginContainer/VBoxContainer/RychlostButton.text = Cisla.zobraz(upgradeRychlosti)
 		$MarginContainer.visible = true
 	else:
 		if(get_parent().penize >= cenaPece):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bq6ptbte7kpcp"]
+[gd_scene load_steps=5 format=3 uid="uid://bq6ptbte7kpcp"]
 
 [ext_resource type="Script" path="res://svet.gd" id="1_h4hr8"]
 [ext_resource type="PackedScene" uid="uid://n3vlutfm4s1f" path="res://okenko.tscn" id="1_lhcts"]
+[ext_resource type="Texture2D" uid="uid://mma10aeql3b8" path="res://pozadi.png" id="4_m235q"]
 [ext_resource type="PackedScene" uid="uid://b5dqvha6hp0hi" path="res://pasVodorovny.tscn" id="6_yka7q"]
 
 [node name="svet" type="Node2D"]
@@ -12,9 +13,15 @@ z_index = 5
 position = Vector2(1087, 1176)
 
 [node name="Label" type="Label" parent="."]
+z_index = 20
 offset_right = 552.0
 offset_bottom = 587.0
 theme_override_font_sizes/font_size = 300
 
 [node name="pasHlavni" parent="." instance=ExtResource("6_yka7q")]
 position = Vector2(50, 1170)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(540, 1170)
+texture = ExtResource("4_m235q")
