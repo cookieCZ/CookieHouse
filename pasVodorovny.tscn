@@ -1,7 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://b5dqvha6hp0hi"]
+[gd_scene load_steps=10 format=3 uid="uid://b5dqvha6hp0hi"]
 
 [ext_resource type="Script" path="res://pasVodorovny.gd" id="1_6rc7o"]
-[ext_resource type="Texture2D" uid="uid://bonaym4klk588" path="res://icon.svg" id="2_8bi2h"]
+[ext_resource type="Texture2D" uid="uid://bwo2vm3l8vw6p" path="res://vodorovnyPas.png" id="2_uynrs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bchkt"]
+atlas = ExtResource("2_uynrs")
+region = Rect2(0, 0, 1080, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0fku"]
+atlas = ExtResource("2_uynrs")
+region = Rect2(1080, 0, 1080, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j1iqv"]
+atlas = ExtResource("2_uynrs")
+region = Rect2(2160, 0, 1080, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shmwn"]
+atlas = ExtResource("2_uynrs")
+region = Rect2(3240, 0, 1080, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_alrdl"]
+atlas = ExtResource("2_uynrs")
+region = Rect2(4320, 0, 1080, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_23dlk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bchkt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0fku")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j1iqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shmwn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_alrdl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj147"]
 size = Vector2(376.333, 18)
@@ -10,10 +53,13 @@ size = Vector2(376.333, 18)
 scale = Vector2(3, 3)
 script = ExtResource("1_6rc7o")
 
-[node name="oDoprava" type="Sprite2D" parent="."]
-position = Vector2(162.5, -0.499998)
-scale = Vector2(2.96094, 0.523437)
-texture = ExtResource("2_8bi2h")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(159.667, -2.33333)
+scale = Vector2(0.45, 0.45)
+sprite_frames = SubResource("SpriteFrames_23dlk")
+autoplay = "default"
+frame_progress = 0.390708
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(162.5, 1.58946e-07)
