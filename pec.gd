@@ -15,21 +15,26 @@ var cenaPece
 func _ready():
 	pass
 
+func prijmi_data(data, cisloPece):	#data["pos_x"]
+	if data["koupena"]:
+		nacti_pec(data["cenaSusenky"], data["upgradeRychlosti"], data["upgradeCeny"], data["spawnZaMinutu"])
+	else:
+		vytvor_pec(cisloPece)
+
 func vytvor_pec(cisloPece):
-	$Button.modulate = Color("#FFFFFFFF")
-	$Button.text = "+: " + Cisla.zobraz(cenaPece)
 	true_init(
 		pow(1000, cisloPece),
 		ceil(pow(1000, cisloPece) / 2.0),
 		pow(100, cisloPece) * 20,
 		pow(100, cisloPece) * 20,
 		12, false)
+	$Button.modulate = Color("#FFFFFFFF")
+	$Button.text = "+: " + Cisla.zobraz(cenaPece)
 
-#func nacti_pec(cenaSusenky, upgradeRychlosti, upgradeCeny, spawnZaMinutu):
-#	true_init(0, cenaSusenky, upgradeRychlosti, upgradeCeny, spawnZaMinutu, true)
 func nacti_pec(cena_susenky, upgrade_rychlosti, upgrade_ceny, spawn_za_minutu):
-	vytvor_pas()
+	$Sprite2D.visible = true
 	true_init(0, cena_susenky, upgrade_rychlosti, upgrade_ceny, spawn_za_minutu, true)
+	vytvor_pas()
 
 func true_init(cena_pece, cena_susenky, upgrade_rychlosti, upgrade_ceny, spawn_za_minutu, je_koupena):
 	cenaPece = cena_pece
@@ -42,6 +47,17 @@ func true_init(cena_pece, cena_susenky, upgrade_rychlosti, upgrade_ceny, spawn_z
 		smerSusenky = "dolů"
 	else:
 		smerSusenky = "nahoru"
+
+func vrat_data():
+	var data = {
+		"cenaSusenky" : cenaSusenky,
+		"upgradeRychlosti" : upgradeRychlosti,
+		"upgradeCeny" : upgradeCeny,
+		"spawnZaMinutu" : spawnZaMinutu,
+		"koupena" : koupena,
+		"cenaPece" : cenaPece
+	}
+	return data
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
