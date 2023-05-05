@@ -25,8 +25,8 @@ func _ready():
 			listPeci.append(pec)
 
 func souradnice_pece(i):
-	var x = 880 - (i / 2) * 350
-	var y
+	var x = 880 - (i / 2) * 350	#screen: 1080
+	var y	#screen: 2340
 	if(i % 2 == 0):
 		y = 200
 	else:
@@ -55,10 +55,12 @@ func precti_data():
 		pec.prijmi_data(data, i)
 		listPeci.append(pec)
 
+	filos.close()
+
+func uloz_data():
 	var dir = DirAccess.open(saveDir)
 	dir.remove(saveDir + saveFile)
 
-func uloz_data():
 	var filos = FileAccess.open(saveDir + saveFile, FileAccess.WRITE)
 
 	var data = penize
@@ -69,6 +71,8 @@ func uloz_data():
 		data = pec.vrat_data()
 		json_string = JSON.stringify(data)
 		filos.store_line(json_string)
+
+	filos.close()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

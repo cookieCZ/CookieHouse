@@ -1,5 +1,5 @@
 2a60927148abd1d33b818b535e306557
-::res://::1683218386
+::res://::1683273309
 Cisla.gd::GDScript::-1::1683217865::0::1::::Cisla<>RefCounted<>::
 cookie.gd::GDScript::-1::1683217865::0::1::::<>Area2D<>::
 cookie.png::CompressedTexture2D::5396164640630265080::1682668956::1682668957::1::::<><>::
@@ -13,9 +13,9 @@ pasVodorovny.gd::GDScript::-1::1683217865::0::1::::<>StaticBody2D<>::
 pasVodorovny.tscn::PackedScene::4499288468734440354::1683125101::0::1::::<><>::res://pasVodorovny.gd<>uid://bwo2vm3l8vw6p
 pec.gd::GDScript::-1::1683217866::0::1::::<>Area2D<>::
 Pec.png::CompressedTexture2D::1658274455543703593::1681973401::1681973403::1::::<><>::
-pec.tscn::PackedScene::489942787975314298::1683217834::0::1::::<><>::uid://xvjsj61vbe3j<>res://pec.gd
+pec.tscn::PackedScene::489942787975314298::1683218750::0::1::::<><>::uid://xvjsj61vbe3j<>res://pec.gd
 pozadi.png::CompressedTexture2D::867086400633974667::1682668956::1682668957::1::::<><>::
-svet.gd::GDScript::-1::1683218374::0::1::::<>Node2D<>::
-svet.tscn::PackedScene::3574382659352711199::1683217834::0::1::::<><>::res://svet.gd<>uid://n3vlutfm4s1f<>uid://mma10aeql3b8<>uid://b5dqvha6hp0hi
+svet.gd::GDScript::-1::1683218938::0::1::::<>Node2D<>::
+svet.tscn::PackedScene::3574382659352711199::1683218938::0::1::::<><>::res://svet.gd<>uid://n3vlutfm4s1f<>uid://mma10aeql3b8<>uid://b5dqvha6hp0hi
 svislyPas.png::CompressedTexture2D::8346377489766558940::1682668956::1682668957::1::::<><>::
 vodorovnyPas.png::CompressedTexture2D::3961154066842813725::1682668956::1682668957::1::::<><>::

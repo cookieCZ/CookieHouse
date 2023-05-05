@@ -16,7 +16,7 @@ position = Vector2(1087, 1176)
 z_index = 20
 offset_right = 552.0
 offset_bottom = 587.0
-theme_override_font_sizes/font_size = 300
+theme_override_font_sizes/font_size = 200
 
 [node name="pasHlavni" parent="." instance=ExtResource("6_yka7q")]
 position = Vector2(50, 1170)

@@ -47,7 +47,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oj147"]
-size = Vector2(376.333, 18)
+size = Vector2(376.333, 5.33333)
 
 [node name="pasSvisly" type="StaticBody2D"]
 scale = Vector2(3, 3)
@@ -62,5 +62,5 @@ frame_progress = 0.390708
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(162.5, 1.58946e-07)
+position = Vector2(162.5, -6.33333)
 shape = SubResource("RectangleShape2D_oj147")

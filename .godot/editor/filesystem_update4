@@ -1,3 +1,6 @@
 res://svet.tscn
 res://svet.gd
 res://pec.tscn
+res://save.json
+res://pasVodorovny.tscn
+res://pec.gd

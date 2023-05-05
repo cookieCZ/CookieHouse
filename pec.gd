@@ -54,8 +54,7 @@ func vrat_data():
 		"upgradeRychlosti" : upgradeRychlosti,
 		"upgradeCeny" : upgradeCeny,
 		"spawnZaMinutu" : spawnZaMinutu,
-		"koupena" : koupena,
-		"cenaPece" : cenaPece
+		"koupena" : koupena
 	}
 	return data
 
@@ -106,7 +105,7 @@ func _on_cena_button_pressed():
 	if(get_parent().penize >= upgradeCeny):
 		get_parent().penize -= upgradeCeny
 		upgradeCeny *= 2
-		cenaSusenky = ceil(cenaSusenky * 1.1)
+		cenaSusenky = ceil(cenaSusenky * 1.8)
 	$MarginContainer.visible = false
 
 func _on_rychlost_button_pressed():
