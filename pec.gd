@@ -100,12 +100,14 @@ func _on_button_pressed():
 			vytvor_pas()
 			$Button.modulate = Color("#00000000")
 			$Sprite2D.visible = true
+			get_parent().uloz_data()
 
 func _on_cena_button_pressed():
 	if(get_parent().penize >= upgradeCeny):
 		get_parent().penize -= upgradeCeny
 		upgradeCeny *= 2
 		cenaSusenky = ceil(cenaSusenky * 1.8)
+		get_parent().uloz_data()
 	$MarginContainer.visible = false
 
 func _on_rychlost_button_pressed():
@@ -114,4 +116,5 @@ func _on_rychlost_button_pressed():
 		upgradeRychlosti *= 10
 		spawnZaMinutu += 1
 		$Timer.wait_time = 1 / (spawnZaMinutu / 60.0)
+		get_parent().uloz_data()
 	$MarginContainer.visible = false

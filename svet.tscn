@@ -25,3 +25,9 @@ position = Vector2(50, 1170)
 z_index = -2
 position = Vector2(540, 1170)
 texture = ExtResource("4_m235q")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -38,7 +38,8 @@ func nastav_smer(novySmer):
 func _on_body_entered(body):
 	#jestli pás, vem směr a rychlost
 	if(body.has_method("ziskej_smer")):
-		smer = body.ziskej_smer()
+		if(body.ziskej_smer() == "doprava"):
+			smer = body.ziskej_smer()
 	#jestli okenko, prodej se
 	if(body.name == "okenko"):
 		prodej_se()

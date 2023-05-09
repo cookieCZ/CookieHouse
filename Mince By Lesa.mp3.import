@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dit46o2rvftwj"
+path="res://.godot/imported/Mince By Lesa.mp3-3254af450b3c4e6b5fda49b569e3ac75.mp3str"
+
+[deps]
+
+source_file="res://Mince By Lesa.mp3"
+dest_files=["res://.godot/imported/Mince By Lesa.mp3-3254af450b3c4e6b5fda49b569e3ac75.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

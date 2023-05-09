@@ -1,3 +1,4 @@
+Timer
 AnimatedSprite2D
 Sprite2D
 Button
@@ -7,6 +8,5 @@ MarginContainer
 CanvasLayer
 CollisionShape2D
 Area2D
-Timer
 StaticBody2D
 Node2D

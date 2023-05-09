@@ -4,13 +4,13 @@ var penize
 
 var pecPreload = preload("res://pec.tscn")
 var listPeci = []
-var saveDir = "res://"
+var saveDir = "user://"
 var saveFile = "save.json"
 #file nemá přesně strukturu json, neumí se vymazat
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	if FileAccess.file_exists(saveFile):
+	if FileAccess.file_exists(saveDir + saveFile):
 		#jestli je save
 		precti_data()
 	else:
@@ -58,8 +58,9 @@ func precti_data():
 	filos.close()
 
 func uloz_data():
-	var dir = DirAccess.open(saveDir)
-	dir.remove(saveDir + saveFile)
+	if FileAccess.file_exists(saveDir + saveFile):
+		var dir = DirAccess.open(saveDir)
+		dir.remove(saveDir + saveFile)
 
 	var filos = FileAccess.open(saveDir + saveFile, FileAccess.WRITE)
 
@@ -82,3 +83,6 @@ func _notification(what):
 	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		uloz_data()
 		get_tree().quit()
+
+func _on_timer_timeout():
+	uloz_data()

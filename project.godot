@@ -13,7 +13,7 @@ config_version=5
 config/name="CookieHouse"
 run/main_scene="res://svet.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://COokieHouseIkonka.png"
 
 [display]
 
@@ -25,3 +25,4 @@ window/stretch/mode="viewport"
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
