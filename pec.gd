@@ -25,8 +25,8 @@ func vytvor_pec(cisloPece):
 	true_init(
 		pow(1000, cisloPece),
 		ceil(pow(1000, cisloPece) / 2.0),
-		pow(100, cisloPece) * 20,
-		pow(100, cisloPece) * 20,
+		pow(1000, cisloPece) * 10,
+		pow(1000, cisloPece) * 10,
 		12, false)
 	$Button.modulate = Color("#FFFFFFFF")
 	$Button.text = "+: " + Cisla.zobraz(cenaPece)
