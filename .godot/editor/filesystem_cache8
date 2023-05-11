@@ -1,11 +1,11 @@
 bdbec74c6e5bd72edee867077d70896c
-::res://::1683704528
+::res://::1683824020
 Cisla.gd::GDScript::-1::1683217865::0::1::::Cisla<>RefCounted<>::
 cookie.gd::GDScript::-1::1683621600::0::1::::<>Area2D<>::
 cookie.png::CompressedTexture2D::5396164640630265080::1682668956::1682668957::1::::<><>::
 cookie.tscn::PackedScene::2219749142802202182::1683125101::0::1::::<><>::res://cookie.gd<>uid://ci47bp8tne78g
 COokieHouseIkonka.png::CompressedTexture2D::8445337774055928588::1683704528::1683704529::1::::<><>::
-export_presets.cfg::TextFile::-1::1683621665::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1683704670::0::1::::<><>::
 icon.svg::CompressedTexture2D::3395944940031061627::1680621584::1680621591::1::::<><>::
 Mince By Lesa.mp3::AudioStreamMP3::7761812907749282969::1683704528::1683621535::1::::<><>::
 okenko.tscn::PackedScene::971553325051805769::1683125102::0::1::::<><>::uid://dtx4bndlfgi8f
@@ -14,9 +14,9 @@ pas.gd::GDScript::-1::1683217865::0::1::::<>StaticBody2D<>::
 pasSvisly.tscn::PackedScene::7153228285861378890::1683125101::0::1::::<><>::res://pas.gd<>uid://dq6bvahn0ktnw
 pasVodorovny.gd::GDScript::-1::1683217865::0::1::::<>StaticBody2D<>::
 pasVodorovny.tscn::PackedScene::4499288468734440354::1683275107::0::1::::<><>::res://pasVodorovny.gd<>uid://bwo2vm3l8vw6p
-pec.gd::GDScript::-1::1683619439::0::1::::<>Area2D<>::
+pec.gd::GDScript::-1::1683704616::0::1::::<>Area2D<>::
 Pec.png::CompressedTexture2D::1658274455543703593::1681973401::1681973403::1::::<><>::
-pec.tscn::PackedScene::489942787975314298::1683619494::0::1::::<><>::uid://xvjsj61vbe3j<>res://pec.gd
+pec.tscn::PackedScene::489942787975314298::1683704616::0::1::::<><>::uid://xvjsj61vbe3j<>res://pec.gd
 pozadi.png::CompressedTexture2D::867086400633974667::1682668956::1682668957::1::::<><>::
 svet.gd::GDScript::-1::1683621639::0::1::::<>Node2D<>::
 svet.tscn::PackedScene::3574382659352711199::1683621639::0::1::::<><>::res://svet.gd<>uid://n3vlutfm4s1f<>uid://mma10aeql3b8<>uid://b5dqvha6hp0hi

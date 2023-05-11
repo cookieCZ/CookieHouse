@@ -43,6 +43,7 @@ func true_init(cena_pece, cena_susenky, upgrade_rychlosti, upgrade_ceny, spawn_z
 	upgradeCeny = upgrade_ceny
 	spawnZaMinutu = spawn_za_minutu
 	koupena = je_koupena
+	nastav_spawn()
 	if(position.y<get_viewport_rect().size.y/2):
 		smerSusenky = "dolů"
 	else:
@@ -86,6 +87,9 @@ func spawn():
 func _on_timer_timeout():
 	spawn()
 
+func nastav_spawn():
+	$Timer.wait_time = 1 / (spawnZaMinutu / 60.0)
+
 func _on_button_pressed():
 	if koupena:
 		$MarginContainer/VBoxContainer/CenaLabel.text = Cisla.zobraz(cenaSusenky) + "/ks"
@@ -115,6 +119,6 @@ func _on_rychlost_button_pressed():
 		get_parent().penize -= upgradeRychlosti
 		upgradeRychlosti *= 10
 		spawnZaMinutu += 1
-		$Timer.wait_time = 1 / (spawnZaMinutu / 60.0)
+		nastav_spawn()
 		get_parent().uloz_data()
 	$MarginContainer.visible = false
